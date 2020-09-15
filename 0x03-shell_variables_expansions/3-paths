@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $PATH | tr -cd ':' | wc -c
+echo $PATH|cut --output-delimiter=$'\n' -d":" -f 1-|wc -l
